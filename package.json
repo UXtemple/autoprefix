@@ -1,0 +1,35 @@
+{
+  "name": "autoprefix",
+  "version": "1.0.3",
+  "description": "Adds vendor prefixes to an object of styles through autoprefixer",
+  "repository": "UXtemple/autoprefix",
+  "license": "MIT",
+  "main": "index.js",
+  "devDependencies": {
+    "babel": "^5.8.19",
+    "lodash": "^3.10.0",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": ".bin/test",
+    "prepublish": "if [ \"$NODE_ENV\" = production  ]; then .bin/compile; fi",
+    "postpublish": "if [ \"$NODE_ENV\" = production   ]; then .bin/clean; fi"
+  },
+  "keywords": [
+    "auto",
+    "prefix",
+    "vendor",
+    "style",
+    "rules",
+    "autoprefix-core",
+    "react",
+    "inline",
+    "styles"
+  ],
+  "dependencies": {
+    "autoprefixer-core": "~5.1.1",
+    "camelcase": "^1.1.0",
+    "css-parse": "^2.0.0",
+    "decamelize": "^1.0.0"
+  }
+}
