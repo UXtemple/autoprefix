@@ -3,9 +3,11 @@
 Adds vendor prefixes to an object of styles through
 [autoprefixer](https://github.com/postcss/autoprefixer).
 
-Best in combination with
+Works best in combination with
 [react-autoprefixer](https://github.com/UXtemple/babel-plugin-react-autoprefix)
 babel plugin to auto prefix your inline styles at compilation time :).
+
+[![Build Status](https://travis-ci.org/UXtemple/autoprefix.svg)](https://travis-ci.org/UXtemple/autoprefix)
 
 ## Installation
 
