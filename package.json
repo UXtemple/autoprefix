@@ -29,7 +29,6 @@
   "dependencies": {
     "autoprefixer-core": "~5.1.1",
     "camelcase": "^1.1.0",
-    "css-parse": "^2.0.0",
     "decamelize": "^1.0.0"
   }
 }
