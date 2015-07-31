@@ -34,7 +34,7 @@ export default function autoprefix(object) {
     .reduce((p, c) => p.concat(c), [])
     .reduce((p, c) => {
       if (p.hasOwnProperty(c.key)) {
-        p[c.key] = Array.isArray(p[c.key]) ? p[c.key].push(c.value) : [p[c.key], c.value];
+        Array.isArray(p[c.key]) ? p[c.key].push(c.value) : p[c.key] = [p[c.key], c.value];
       } else {
         p = {...p, [c.key]: c.value};
       }
