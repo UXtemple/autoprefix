@@ -1,6 +1,5 @@
-import assert from 'assert';
 import autoprefix from '../index';
-import eq from 'lodash/lang/eq';
+import test from 'tape';
 
 const RAW = {
   alignItems: 'center',
@@ -17,4 +16,7 @@ const PREFIXED = {
   display: ['-webkit-box', '-webkit-flex', '-ms-flexbox', 'flex']
 };
 
-it('autoprefixes an object', () => assert(eq(autoprefix(RAW), PREFIXED)));
+test('autoprefixes an object', t => {
+  t.deepEqual(autoprefix(RAW), PREFIXED);
+  t.end();
+});

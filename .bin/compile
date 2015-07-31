@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-COMPILE_IGNORE='node_modules/**,playground/playground.es6,playground/dummy-data/*.es6,__tests__/**,**/__tests__/**'
-
-./node_modules/.bin/babel $1 --ignore $COMPILE_IGNORE --extensions .es6 --out-dir . .

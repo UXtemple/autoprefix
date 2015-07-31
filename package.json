@@ -7,13 +7,13 @@
   "main": "index.js",
   "devDependencies": {
     "babel": "^5.8.19",
-    "lodash": "^3.10.0",
-    "mocha": "^2.2.5"
+    "tape": "^4.0.1"
   },
   "scripts": {
-    "test": ".bin/test",
-    "prepublish": "if [ \"$NODE_ENV\" = production  ]; then .bin/compile; fi",
-    "postpublish": "if [ \"$NODE_ENV\" = production   ]; then .bin/clean; fi"
+    "build": ".bin/build",
+    "clean": ".bin/clean",
+    "push": ".bin/push",
+    "test": ".bin/test"
   },
   "keywords": [
     "auto",
