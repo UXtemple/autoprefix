@@ -9,8 +9,15 @@ function isDeclaration({type}) {
   return type === 'decl';
 }
 
+// If the property is prefixed (i.e., it starts with a hyphen) we have to uppercase the first
+// character for React to recognise it properly.
+function fixCase(prop) {
+  let ret = camelcase(prop);
+  return /^-/.test(prop) ? `${ret.charAt(0).toUpperCase()}${ret.substr(1)}` : ret;
+}
+
 function parseDeclaration({prop, value}) {
-  return {key: camelcase(prop), value};
+  return {key: fixCase(prop), value};
 }
 function parseRule({nodes}) {
   return nodes.filter(isDeclaration).map(parseDeclaration);
