@@ -6,4 +6,6 @@ if [ -d $where ]; then
   tests=`find $where -type f -name '*-test.*' -not -path './node_modules/*'`
 fi
 
-./node_modules/.bin/babel-node $2 $tests
+for test in $tests; do
+  ./node_modules/.bin/babel-node $2 $test
+done

@@ -1,19 +1,12 @@
 import autoprefixer from 'autoprefixer-core';
-import camelcase from 'camelcase';
 import decamelize from 'decamelize';
+import fixCase from './fix-case';
 
 function isRule({type}) {
   return type === 'rule';
 }
 function isDeclaration({type}) {
   return type === 'decl';
-}
-
-// If the property is prefixed (i.e., it starts with a hyphen) we have to uppercase the first
-// character for React to recognise it properly.
-function fixCase(prop) {
-  let ret = camelcase(prop);
-  return /^-/.test(prop) ? `${ret.charAt(0).toUpperCase()}${ret.substr(1)}` : ret;
 }
 
 function parseDeclaration({prop, value}) {
