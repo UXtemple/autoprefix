@@ -1,6 +1,6 @@
 {
   "name": "autoprefix",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Adds vendor prefixes to an object of styles through autoprefixer",
   "repository": "UXtemple/autoprefix",
   "license": "MIT",
