@@ -12,13 +12,13 @@ babel plugin to auto prefix your inline styles at compilation time :).
 ## Installation
 
 ```sh
-$ npm install autoprefixer
+$ npm install autoprefix
 ```
 
 ## Usage
 
 ```javascript
-require('autoprefixer')({
+require('autoprefix')({
   alignItems: 'center',
   background: 'linear-gradient(350.5deg, white, black), linear-gradient(-130deg, black, white), linear-gradient(45deg, black, white)'
 });
