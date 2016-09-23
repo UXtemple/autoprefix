@@ -2,15 +2,18 @@ import autoprefixer from 'autoprefixer-core';
 import decamelize from 'decamelize';
 import fixCase from './fix-case';
 
-function isRule({type}) {
+function isRule({ type }) {
   return type === 'rule';
 }
-function isDeclaration({type}) {
+function isDeclaration({ type }) {
   return type === 'decl';
 }
 
-function parseDeclaration({prop, value}) {
-  return {key: fixCase(prop), value};
+function parseDeclaration({ prop, value }) {
+  return {
+    key: fixCase(prop),
+    value: /^[0-9]+$/.test(value) ? parseInt(value, 10) : value
+  };
 }
 function parseRule({nodes}) {
   return nodes.filter(isDeclaration).map(parseDeclaration);
