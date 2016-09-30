@@ -6,12 +6,9 @@
   "license": "MIT",
   "main": "index.js",
   "devDependencies": {
-    "babel": "^5.8.19",
     "tape": "^4.0.1"
   },
   "scripts": {
-    "build": ".bin/build",
-    "clean": ".bin/clean",
     "push": ".bin/push",
     "test": ".bin/test"
   },
