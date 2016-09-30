@@ -46,7 +46,7 @@ module.exports = function autoprefix(object) {
       if (p.hasOwnProperty(c.key)) {
         Array.isArray(p[c.key]) ? p[c.key].push(c.value) : p[c.key] = [p[c.key], c.value]
       } else {
-        p = {...p, [c.key]: c.value}
+        p = Object.assign({}, p, {[c.key]: c.value})
       }
       return p
     }, {})
